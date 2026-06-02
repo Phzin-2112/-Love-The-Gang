@@ -4,8 +4,14 @@ import time # Adicionado para pausas dramáticas
 print("🎮 Bem-vindo ao Vida de Bairro, mano! Se prepara pra vida na quebrada!\n")
  
 # Nome da gangue
-gangue = input("Manda o nome da tua gangue, maluco: ")
+gangue = input("Manda o nome da tua gangue, maluco: ").strip()
+
+# Repete enquanto o usuário digitar vazio ou apenas espaços
+while not gangue:
+    gangue = input("Sua gangue tem que ter um nome, bro! Fala aí: ").strip()
+
 print(f"\nBoa! Sua gangue '{gangue}' vai dominar a quebrada, parceiro!\n")
+
  
 escolhi = input("Qual teu vulgo na quebrada? ")
 print(f"\nAí sim, {escolhi}! Tamo junto!\n")
